@@ -176,7 +176,7 @@ jobs:
 
       - name: Package with AnyKernel3
         run: |
-          git clone --depth=1 https://github.com/rinnsakaguchi/AnyKernel3 -b FSociety
+          git clone --depth=1 https://github.com/rinnsakaguchi/AnyKernel3
           cp Image.gz-dtb dtb.img AnyKernel3/ 2>/dev/null || true
           cd AnyKernel3 && zip -r9 ../${{ env.ZIPNAME }} . -x '*.git*' README.md *placeholder
 
